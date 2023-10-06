@@ -5,7 +5,11 @@ const db = new sqlite3.Database('./school.db');
 db.serialize(() => {
     const stmt = db.prepare("INSERT INTO students VALUES (?, ?)");
     stmt.run(1, 'Aswin Sasikanth');
-    stmt.run(2, 'Dhruv Rathod');
+    stmt.run(2, 'Raghu Ram');
+    stmt.run(3, 'Pradeep Koneru');
+    stmt.run(4, 'Kalyan Boppna');
+    stmt.run(5, 'Jagadeesh M');
+    stmt.run(6, 'John Doe raj');
     stmt.finalize();
 
     // Retrieve data
